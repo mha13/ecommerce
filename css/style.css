@@ -1,0 +1,13 @@
+#cartello::after{
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
