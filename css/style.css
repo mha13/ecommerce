@@ -1,13 +1,70 @@
-#cartello::after{
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Cart badge pulse === */
+#cartello span {
+  transition: transform 0.3s ease;
+}
+#cartello:hover span {
+  transform: scale(1.2);
+}
+
+/* === Product card animations === */
+.product-card {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+.product-card:nth-child(1) { animation-delay: 0.05s; }
+.product-card:nth-child(2) { animation-delay: 0.1s; }
+.product-card:nth-child(3) { animation-delay: 0.15s; }
+.product-card:nth-child(4) { animation-delay: 0.2s; }
+.product-card:nth-child(5) { animation-delay: 0.25s; }
+.product-card:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Product image hover zoom === */
+.product-card img {
+  transition: transform 0.4s ease;
+}
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* === Star rating color === */
+.star-filled {
+  color: #D97706;
+}
+.star-empty {
+  color: #D1D5DB;
+}
+
+/* === Button hover lift === */
+.btn-cart {
+  transition: all 0.3s ease;
+}
+.btn-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(141, 66, 1, 0.3);
+}
+
+/* === Mobile nav transition === */
+#mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#mobile-nav.open {
+  max-height: 300px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }

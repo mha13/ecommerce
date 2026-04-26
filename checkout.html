@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./img/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Checkout — Cocoa Luxe</title>
+  </head>
+  <body class="font-[Inter] bg-[#FAF7F2] text-[#2D1810] min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[#8D4201] backdrop-blur-md shadow-lg">
+      <div class="max-w-7xl m-auto flex items-center justify-between px-4 sm:px-6 py-3">
+        <a href="./index.html" class="flex-none w-16 sm:w-20">
+          <img src="./img/logo.png" alt="Cocoa Luxe Logo" class="w-full" />
+        </a>
+        <span class="text-white font-medium text-sm tracking-wide">Secure Checkout</span>
+        <a href="./cart.html" class="text-white hover:text-amber-200 text-sm transition">← Back to Cart</a>
+      </div>
+    </header>
+
+    <main class="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-10">
+      <!-- Checkout Form -->
+      <div id="checkout-form-container">
+        <h1 class="font-[Playfair_Display] text-3xl sm:text-4xl font-bold mb-8">Checkout</h1>
+
+        <div class="grid md:grid-cols-5 gap-8">
+          <!-- Form -->
+          <form id="checkout-form" class="md:col-span-3 space-y-6" onsubmit="return false;">
+            <!-- Shipping -->
+            <div class="bg-white rounded-2xl shadow-sm p-6">
+              <h2 class="font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="w-7 h-7 bg-[#8D4201] text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                Shipping Information
+              </h2>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">First Name</label>
+                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="Mario" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Last Name</label>
+                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="Rossi" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Email</label>
+                  <input type="email" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="mario@example.com" />
+                </div>
+                <div class="sm:col-span-2">
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Address</label>
+                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="Via Roma 42" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">City</label>
+                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="Milano" />
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">ZIP Code</label>
+                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="20121" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment -->
+            <div class="bg-white rounded-2xl shadow-sm p-6">
+              <h2 class="font-bold text-lg mb-4 flex items-center gap-2">
+                <span class="w-7 h-7 bg-[#8D4201] text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                Payment Details
+              </h2>
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Card Number</label>
+                  <input type="text" required maxlength="19" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="4242 4242 4242 4242" />
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-medium text-gray-500 mb-1">Expiry</label>
+                    <input type="text" required maxlength="5" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="MM/YY" />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-gray-500 mb-1">CVV</label>
+                    <input type="text" required maxlength="3" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="123" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button id="place-order-btn" type="submit" class="w-full bg-[#8D4201] hover:bg-[#6A3201] text-white py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              Place Order
+            </button>
+          </form>
+
+          <!-- Order Summary Sidebar -->
+          <div class="md:col-span-2">
+            <div class="bg-white rounded-2xl shadow-sm p-6 sticky top-24">
+              <h2 class="font-bold text-lg mb-4">Order Summary</h2>
+              <div id="order-items" class="space-y-3 max-h-64 overflow-y-auto"></div>
+              <hr class="my-4 border-gray-200" />
+              <div class="flex justify-between text-sm text-gray-500 mb-2">
+                <span>Subtotal</span><span id="order-subtotal">$0.00</span>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500 mb-2">
+                <span>Shipping</span><span id="order-shipping">Free</span>
+              </div>
+              <hr class="my-3 border-gray-200" />
+              <div class="flex justify-between font-bold text-lg text-[#2D1810]">
+                <span>Total</span><span id="order-total">$0.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success State (hidden initially) -->
+      <div id="checkout-success" class="hidden text-center py-20">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#16a34a" viewBox="0 0 256 256">
+            <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+          </svg>
+        </div>
+        <h2 class="font-[Playfair_Display] text-3xl font-bold mb-3">Order Confirmed!</h2>
+        <p class="text-gray-500 mb-2">Thank you for your purchase.</p>
+        <p class="text-gray-400 text-sm mb-8">Order #<span id="order-number"></span></p>
+        <a href="./index.html" class="inline-block bg-[#8D4201] hover:bg-[#6A3201] text-white px-8 py-3 rounded-full font-semibold text-sm transition">
+          Back to Shop
+        </a>
+      </div>
+    </main>
+
+    <footer class="bg-[#1a0e08] text-white/70">
+      <div class="border-t border-white/10 text-center py-5 text-xs text-white/40">
+        © 2026 Cocoa Luxe. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      const ENDPOINT_CART = "http://localhost:3000/cart";
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        const cart = await fetch(ENDPOINT_CART).then((r) => r.json());
+        const itemsEl = document.getElementById("order-items");
+
+        if (cart.length === 0) {
+          window.location.href = "./cart.html";
+          return;
+        }
+
+        let subtotal = 0;
+        cart.forEach((item) => {
+          const qty = item.quantity || 1;
+          subtotal += item.price * qty;
+          itemsEl.innerHTML += `
+            <div class="flex items-center gap-3">
+              <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover" />
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium truncate">${item.name}</p>
+                <p class="text-xs text-gray-400">x${qty}</p>
+              </div>
+              <p class="text-sm font-semibold">$${(item.price * qty).toFixed(2)}</p>
+            </div>`;
+        });
+
+        const shipping = subtotal >= 50 ? 0 : 5.99;
+        document.getElementById("order-subtotal").textContent = `$${subtotal.toFixed(2)}`;
+        document.getElementById("order-shipping").textContent = shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`;
+        document.getElementById("order-total").textContent = `$${(subtotal + shipping).toFixed(2)}`;
+
+        // Place order
+        document.getElementById("checkout-form").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const btn = document.getElementById("place-order-btn");
+          btn.textContent = "Processing...";
+          btn.disabled = true;
+
+          // Simulate processing delay
+          await new Promise((r) => setTimeout(r, 1500));
+
+          // Clear cart
+          for (const item of cart) {
+            await fetch(`${ENDPOINT_CART}/${item.id}`, { method: "DELETE" });
+          }
+
+          // Show success
+          document.getElementById("checkout-form-container").classList.add("hidden");
+          document.getElementById("checkout-success").classList.remove("hidden");
+          document.getElementById("order-number").textContent = Math.random().toString(36).substring(2, 10).toUpperCase();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -63,64 +63,37 @@
   ],
   "cart": [
     {
-      "id": "_tqrrUAOSGc",
+      "id": "dHu-r3pyI5I",
       "name": "Artisan Praline Collection",
       "description": "Hand-decorated pralines topped with hazelnuts, sea salt, caramel drizzle, and raspberry. Assorted flavors.",
       "price": 34.99,
       "category": "pralines",
       "image": "./img/choco_pralines.png",
       "rating": 4.8,
-      "inStock": true
+      "inStock": true,
+      "quantity": 1
     },
     {
-      "id": "ZDBZvmpXPDE",
-      "name": "Cocoa Noir Dark Bar",
-      "description": "Intense 85% single-origin dark chocolate bar. Rich, bold flavor with notes of espresso and dried fruit.",
-      "price": 12.99,
-      "category": "bars",
-      "image": "./img/choco_bar_dark.png",
-      "rating": 4.7,
-      "inStock": true
-    },
-    {
-      "id": "OTlx7QYSR2c",
+      "id": "g42dU1_LLQ8",
       "name": "Premium Cocoa Powder",
       "description": "Single-origin Dutch-process cocoa powder in a handcrafted jar. Perfect for hot chocolate and baking.",
       "price": 24.99,
       "category": "cocoa",
       "image": "./img/choco_hot_cocoa.png",
       "rating": 4.8,
-      "inStock": true
+      "inStock": true,
+      "quantity": 1
     },
     {
-      "id": "beb0eeFHlyY",
-      "name": "Gold Dust Truffle Box",
-      "description": "Luxurious handcrafted dark chocolate truffles dusted with 24k edible gold. A premium gift box of 16 pieces.",
-      "price": 49.99,
-      "category": "truffles",
-      "image": "./img/choco_truffle.png",
-      "rating": 4.9,
-      "inStock": true
-    },
-    {
-      "id": "a2DTkRgJZ48",
-      "name": "Hazelnut Milk Chocolate Bar",
-      "description": "Creamy milk chocolate loaded with whole roasted hazelnuts. Smooth, nutty, and irresistible.",
-      "price": 9.99,
+      "id": "bVv4ohl6Wzs",
+      "name": "Cocoa Noir Dark Bar",
+      "description": "Intense 85% single-origin dark chocolate bar. Rich, bold flavor with notes of espresso and dried fruit.",
+      "price": 12.99,
       "category": "bars",
-      "image": "./img/choco_milk_bar.png",
-      "rating": 4.5,
-      "inStock": true
-    },
-    {
-      "id": "1mwsWRrTVj0",
-      "name": "Jewel Bonbon Selection",
-      "description": "Stunning glossy bonbons in vibrant jewel-tone shells. Each filled with unique ganache flavors.",
-      "price": 39.99,
-      "category": "bonbons",
-      "image": "./img/choco_bonbons.png",
-      "rating": 4.6,
-      "inStock": true
+      "image": "./img/choco_bar_dark.png",
+      "rating": 4.7,
+      "inStock": true,
+      "quantity": 1
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
