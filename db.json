@@ -61,40 +61,6 @@
       "inStock": true
     }
   ],
-  "cart": [
-    {
-      "id": "dHu-r3pyI5I",
-      "name": "Artisan Praline Collection",
-      "description": "Hand-decorated pralines topped with hazelnuts, sea salt, caramel drizzle, and raspberry. Assorted flavors.",
-      "price": 34.99,
-      "category": "pralines",
-      "image": "./img/choco_pralines.png",
-      "rating": 4.8,
-      "inStock": true,
-      "quantity": 1
-    },
-    {
-      "id": "g42dU1_LLQ8",
-      "name": "Premium Cocoa Powder",
-      "description": "Single-origin Dutch-process cocoa powder in a handcrafted jar. Perfect for hot chocolate and baking.",
-      "price": 24.99,
-      "category": "cocoa",
-      "image": "./img/choco_hot_cocoa.png",
-      "rating": 4.8,
-      "inStock": true,
-      "quantity": 1
-    },
-    {
-      "id": "bVv4ohl6Wzs",
-      "name": "Cocoa Noir Dark Bar",
-      "description": "Intense 85% single-origin dark chocolate bar. Rich, bold flavor with notes of espresso and dried fruit.",
-      "price": 12.99,
-      "category": "bars",
-      "image": "./img/choco_bar_dark.png",
-      "rating": 4.7,
-      "inStock": true,
-      "quantity": 1
-    }
-  ],
+  "cart": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
