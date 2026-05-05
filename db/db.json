@@ -1,0 +1,71 @@
+{
+  "eventi": [
+    {
+      "id": "1",
+      "title": "Ivreatronic",
+      "date": "2024-06-15",
+      "location": "Di Bunker Torino",
+      "description": "Ivreatronic è un festival di musica elettronica che si tiene a Ivrea, in Italia. Il festival è noto per la sua atmosfera unica e per la sua attenzione alla musica elettronica di qualità. Ivreatronic si svolge in diverse location della città, tra cui il centro storico, il castello e il parco del Valentino. Il festival offre una vasta gamma di generi musicali, tra cui techno, house, ambient e experimental. Ivreatronic è un evento molto popolare tra gli appassionati di musica elettronica e attira visitatori da tutto il mondo.",
+      "price": 20,
+      "image": "img/event1.avif"
+    },
+    {
+      "id": "2",
+      "title": "ProjektX - Tekno summer",
+      "date": "2026-05-09",
+      "location": "Cacao Club, Torino",
+      "description": "L'estate si accende in anticipo con ProjektX. Un evento imperdibile dedicato agli amanti della musica Tekno e della club culture, ospitato nella splendida cornice all'aperto del Cacao Club di Torino. Preparati a una maratona di ritmi incalzanti ed energia pura dal pomeriggio fino a tarda notte.",
+      "price": 20,
+      "image": "img/event2.avif"
+    },
+    {
+      "id": "3",
+      "title": "PRESAGIO Festival 2026",
+      "date": "2026-06-06",
+      "location": "Parco Arte Vivente, Torino",
+      "description": "Un rituale collettivo dove il suono non segue il tempo — lo precede. Sabato 6 giugno, Presagio abita il confine tra natura e post-industriale, tra arte contemporanea e cultura clubbing all'interno del PAV. Performance artistiche, musica live e dj set con una lineup d'eccezione (Legowelt, Vlada, e/tape, Voodoos and Taboos e molti altri) dalle 13:00 a mezzanotte.",
+      "price": 15,
+      "image": "img/event3.avif"
+    },
+    {
+      "id": "4",
+      "title": "𖤓APHORIYA𖤓",
+      "date": "2026-05-06",
+      "location": "ONE.Torino, Torino",
+      "description": "A ritual of sound and soul. Lasciati trasportare dalle vibrazioni uniche di APHORIYA. L'evento unisce un'esclusiva aperitivo experience a partire dalle 18:30 con tapas e drink dedicati, per poi evolversi dalle 22:00 in un travolgente party Afro House guidato da ritmi tribali e groove profondi.",
+      "price": 12,
+      "image": "img/event4.avif"
+    },
+    {
+      "id": "5",
+      "title": "LOKITA",
+      "date": "2026-04-22",
+      "location": "ONE.Torino , Torino",
+      "description": "La notte si accende con i caldi ritmi latini. LOKITA è la serata interamente dedicata alla Bachata e alla Salsa che trasforma la sala Le Box in una pista sensuale, calda e piena di energia. Che tu sia un ballerino esperto o semplicemente in cerca di divertimento, lasciati trascinare dalle hit del momento e dai grandi classici.",
+      "price": 10,
+      "image": "img/event5.avif"
+    },
+    {
+      "id": "6",
+      "title": "VERAMENTE x BOOGIE TUNES",
+      "date": "2026-05-07",
+      "location": "Jazz Club, Torino",
+      "description": "La collaborazione definitiva tra VERAMENTE e BOOGIE TUNES prende vita sul palco del Jazz Club di Torino in Piazzale Valdo Fusi. Una serata all'insegna della ricercatezza musicale, atmosfere coinvolgenti, sonorità funk, boogie e ritmi eclettici capaci di far ballare e connettere il pubblico.",
+      "price": 10,
+      "image": "img/event6.avif"
+    }
+  ],
+  "cart": [
+    {
+      "id": "n-zbAJLhgdU",
+      "title": "PRESAGIO Festival 2026",
+      "date": "2026-06-06",
+      "location": "Parco Arte Vivente, Torino",
+      "description": "Un rituale collettivo dove il suono non segue il tempo — lo precede. Sabato 6 giugno, Presagio abita il confine tra natura e post-industriale, tra arte contemporanea e cultura clubbing all'interno del PAV. Performance artistiche, musica live e dj set con una lineup d'eccezione (Legowelt, Vlada, e/tape, Voodoos and Taboos e molti altri) dalle 13:00 a mezzanotte.",
+      "price": 15,
+      "image": "img/event3.avif",
+      "quantity": 1
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

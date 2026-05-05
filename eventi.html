@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./img/favicon.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Eventi — EventX</title>
+</head>
+
+<body class="font-[Inter] bg-[#FAF7F2] text-[#2D1810] min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-lg">
+        <div class="max-w-7xl m-auto flex items-center justify-between px-4 sm:px-6 py-3">
+            <!-- Logo -->
+            <a href="./index.html" class="flex-none w-16 sm:w-32">
+                <img src="./img/logo.jpg" alt="EventiX - Home" class="w-full" />
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav
+                class="hidden md:flex gap-8 text-white font-[Playfair_Display] font-semibold text-[15px] tracking-wide">
+                <a href="./index.html"
+                    class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Home</a>
+                <a href="aboutus.html"
+                    class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Chi
+                    Siamo</a>
+                <a href="eventi.html"
+                    class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Eventi</a>
+                <a href="contactus.html"
+                    class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Contattaci</a>
+                <a href="dovesiamo.html"
+                    class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Dove
+                    Siamo</a>
+            </nav>
+
+            <!-- Cart + Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="./cart.html" id="cartello"
+                    class="relative cursor-pointer text-black hover:text-[#FF653F] transition">
+                    <span
+                        class="absolute -top-2 -right-2 bg-black text-white w-5 h-5 rounded-full flex justify-center items-center text-[10px] font-bold shadow">0</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z">
+                        </path>
+                    </svg>
+                </a>
+                <!-- Mobile Hamburger -->
+                <button id="menu-toggle" class="md:hidden text-black" aria-label="Toggle menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                        viewBox="0 0 256 256">
+                        <path
+                            d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Drawer -->
+        <nav id="mobile-nav" class="md:hidden hidden bg-[#FF653F] text-white px-6 pb-4 space-y-3 text-sm font-medium">
+            <a href="./index.html" class="block py-2 border-b border-white/10 hover:text-white transition">Home</a>
+            <a href="aboutus.html" class="block py-2 border-b border-white/10 hover:text-white transition">Chi Siamo</a>
+            <a href="eventi.html" class="block py-2 border-b border-white/10 hover:text-white transition">Eventi</a>
+            <a href="contactus.html" class="block py-2 hover:text-white transition">Contattaci</a>
+            <a href="dovesiamo.html" class="block py-2 border-t border-white/10 hover:text-white transition">Dove
+                Siamo</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section id="products-section" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
+            <div class="text-center mb-10">
+                <p class="text-[#FF653F] text-sm tracking-[0.2em] uppercase mb-2 font-medium">
+                    Esplora la Nostra Selezione di Eventi Esclusivi
+                </p>
+                <h2 class="font-[Playfair_Display] text-2xl sm:text-4xl font-bold text-[#2D1810]">
+                    Nostri Eventi
+                </h2>
+            </div>
+            <div id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
+        </section>
+    </main>
+
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer" class="bg-black text-white/70">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+            <!-- Brand -->
+            <div>
+                <h3 class="font-[Playfair_Display] text-white text-xl font-bold mb-3">
+                    EventX
+                </h3>
+                <p class="leading-relaxed">
+                    Creiamo esperienze indimenticabili con cura, passione e attenzione ai dettagli.
+                    Trasformiamo i vostri momenti speciali in ricordi eterni.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h4 class="text-white font-semibold mb-3">Link Veloci</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="hover:text-[#FF653F] transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="eventi.html" class="hover:text-[#FF653F] transition">Eventi</a>
+                    </li>
+                    <li>
+                        <a href="aboutus.html" class="hover:text-[#FF653F] transition">Chi Siamo</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html" class="hover:text-[#FF653F] transition">Contatti</a>
+                    </li>
+                    <li>
+                        <a href="dovesiamo.html" class="hover:text-[#FF653F] transition">Dove Siamo</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Contact -->
+            <div>
+                <h4 class="text-white font-semibold mb-3">Contatti</h4>
+                <ul class="space-y-2">
+                    <li>info@eventx.com</li>
+                    <li>+39 02 1234 5678</li>
+                    <li>Via Cioccolato 42, Milano</li>
+                </ul>
+            </div>
+            <!-- Newsletter -->
+            <div>
+                <h4 class="text-white font-semibold mb-3">Newsletter</h4>
+                <p class="mb-3">Ricevi le nostre ultime offerte e novità.</p>
+                <form class="flex" onsubmit="event.preventDefault()" id="newletterform">
+                    <input id="email" type="email" placeholder="Email"
+                        class="flex-1 min-w-0 bg-white/10 border border-white/20 rounded-l-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-[#FF653F] text-sm" />
+                    <button id="newletter-btn"
+                        class="bg-[#FF653F] hover:bg-[#E54D2E] px-4 py-2 rounded-r-lg text-white font-semibold text-sm transition">
+                        Iscriviti
+                    </button>
+                </form>
+                <p id="subscribed" class="mt-2 hidden text-[#FF653F] text-sm">
+                    Grazie per esserti iscritto!
+                </p>
+            </div>
+        </div>
+        <div class="border-t border-white/10 text-center py-5 text-xs text-white/40">
+            © 2026 EventX. Tutti i diritti riservati.
+        </div>
+    </footer>
+    <script src="./js/general.js"></script>
+    <script src="./js/eventi.js"></script>
+</body>
+
+</html>

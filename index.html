@@ -1,334 +1,283 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Premium artisan chocolates — handcrafted with the finest cocoa."
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="./img/favicon.ico" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Cocoa Luxe — Premium Chocolates</title>
-  </head>
-  <body class="font-[Inter] bg-[#FAF7F2] text-[#2D1810]">
-    <!-- ===== HEADER / NAV ===== -->
-    <header class="sticky top-0 z-50 bg-[#8D4201] backdrop-blur-md shadow-lg">
-      <div
-        class="max-w-7xl m-auto flex items-center justify-between px-4 sm:px-6 py-3"
-      >
-        <!-- Logo -->
-        <a href="#" class="flex-none w-16 sm:w-20">
-          <img src="./img/logo.png" alt="Cocoa Luxe Logo" class="w-full" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium artisan chocolates — handcrafted with the finest cocoa." />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./img/favicon.ico" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"></script>
+  <title>EventiX - Home</title>
+</head>
+
+<body class="font-[Inter] text-[#2D1810]">
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="sticky top-0 z-50 bg-white shadow-lg">
+    <div class="max-w-7xl m-auto flex items-center justify-between px-4 sm:px-6 py-3">
+      <!-- Logo -->
+      <a href="#" class="flex-none w-16 sm:w-32">
+        <img src="./img/logo.jpg" alt="EventiX - Home" class="w-full" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-8 text-white font-[Playfair_Display] font-semibold text-[15px] tracking-wide">
+        <a href="#" class="text-black  hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Home</a>
+        <a href="aboutus.html"
+          class=" text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Chi Siamo</a>
+        <a href="eventi.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Eventi</a>
+        <a href="contactus.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Contattaci</a>
+
+        <a href="dovesiamo.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Dove Siamo</a>
+      </nav>
+
+      <!-- Cart + Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="./cart.html" id="cartello" class="relative cursor-pointer text-black hover:text-[#FF653F] transition">
+          <span
+            class="absolute -top-2 -right-2 bg-black text-white w-5 h-5 rounded-full flex justify-center items-center text-[10px] font-bold shadow">0</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z">
+            </path>
+          </svg>
         </a>
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" class="md:hidden text-white" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Nav Drawer -->
+    <nav id="mobile-nav" class="md:hidden hidden bg-[#FF653F] text-white px-6 pb-4 space-y-3 text-sm font-medium">
+      <a href="#" class="block py-2 border-b border-white/10 hover:text-[#FF653F] transition">Home</a>
+      <a href="aboutus.html" class="block py-2 border-b border-white/10 hover:text-[#FF653F] transition">Chi Siamo</a>
+      <a href="eventi.html" class="block py-2 border-b border-white/10 hover:text-[#FF653F] transition">Eventi</a>
+      <a href="contactus.html" class="block py-2 hover:text-[#FF653F] transition">Contattaci</a>
+      <a href="dovesiamo.html" class="block py-2 border-t border-white/10 hover:text-[#FF653F] transition">Dove
+        Siamo</a>
+    </nav>
+  </header>
 
-        <!-- Desktop Nav -->
-        <nav
-          class="hidden md:flex gap-8 text-white font-[Playfair_Display] font-semibold text-[15px] tracking-wide"
-        >
-          <a
-            href="#"
-            class="hover:text-amber-200 transition-all duration-200 hover:-translate-y-0.5"
-            >Home</a
-          >
-          <a
-            href="#products-section"
-            class="hover:text-amber-200 transition-all duration-200 hover:-translate-y-0.5"
-            >Products</a
-          >
-          <a
-            href="#about"
-            class="hover:text-amber-200 transition-all duration-200 hover:-translate-y-0.5"
-            >About</a
-          >
-          <a
-            href="#contact"
-            class="hover:text-amber-200 transition-all duration-200 hover:-translate-y-0.5"
-            >Contact</a
-          >
-        </nav>
-
-        <!-- Cart + Mobile Toggle -->
-        <div class="flex items-center gap-4">
-          <a
-            href="./cart.html"
-            id="cartello"
-            class="relative cursor-pointer text-white hover:text-amber-200 transition"
-          >
-            <span
-              class="absolute -top-2 -right-2 bg-white text-[#8D4201] w-5 h-5 rounded-full flex justify-center items-center text-[10px] font-bold shadow"
-              >0</span
-            >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-            >
-              <path
-                d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z"
-              ></path>
-            </svg>
-          </a>
-          <!-- Mobile Hamburger -->
-          <button
-            id="menu-toggle"
-            class="md:hidden text-white"
-            aria-label="Toggle menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              fill="currentColor"
-              viewBox="0 0 256 256"
-            >
-              <path
-                d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"
-              ></path>
-            </svg>
-          </button>
+  <main>
+    <!-- ===== HERO BANNER ===== -->
+    <section class="relative overflow-hidden h-screen flex items-center justify-center" style="background-image: url(img/background\ image.webp);background-repeat: no-repeat;
+  background-attachment: fixed">
+      <div class="py-10 items-center">
+        <div>
+          <div class="h-full w-full bg-black rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm p-5">
+            <p class="text-white text-sm sm:text-base tracking-[0.3em] uppercase mb-3 font-medium">
+              Momenti Indimenticabili
+            </p>
+            <h1
+              class="font-[Playfair_Display] text-white text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-lg mb-5">
+              Scopri la Tua Prossima
+              <span class="text-white">EventX</span> Esperienza
+            </h1>
+            <p class="text-white text-sm sm:text-base max-w-md mb-8 leading-relaxed">
+              Esplora la nostra collezione di eventi selezionati, creati per
+              generare momenti memorabili ed esperienze indimenticabili.
+            </p>
+          </div>
         </div>
       </div>
-      <!-- Mobile Nav Drawer -->
-      <nav
-        id="mobile-nav"
-        class="md:hidden hidden bg-[#6A3201] text-white px-6 pb-4 space-y-3 text-sm font-medium"
-      >
-        <a
-          href="#"
-          class="block py-2 border-b border-white/10 hover:text-amber-200 transition"
-          >Home</a
-        >
-        <a
-          href="#products"
-          class="block py-2 border-b border-white/10 hover:text-amber-200 transition"
-          >Products</a
-        >
-        <a
-          href="#about"
-          class="block py-2 border-b border-white/10 hover:text-amber-200 transition"
-          >About</a
-        >
-        <a href="#contact" class="block py-2 hover:text-amber-200 transition"
-          >Contact</a
-        >
-      </nav>
-    </header>
+    </section>
 
-    <main>
-      <!-- ===== HERO BANNER ===== -->
-      <section class="relative overflow-hidden">
-        <div class="bg-[#fff] py-10 items-center">
-          <div
-            class="max-w-7xl m-auto px-6 sm:px-10 w-full flex justify-between"
-          >
-            <div>
-              <p
-                class="text-amber-600 text-sm sm:text-base tracking-[0.3em] uppercase mb-3 font-medium"
-              >
-                Handcrafted Excellence
-              </p>
-              <h1
-                class="font-[Playfair_Display] text-[#8D4201] text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-lg mb-5"
-              >
-                Indulge in Pure
-                <span class="text-amber-600">Chocolate</span> Bliss
-              </h1>
-              <p
-                class="text-[#2D1810] text-sm sm:text-base max-w-md mb-8 leading-relaxed"
-              >
-                Discover our collection of artisan chocolates, crafted from the
-                world's finest single-origin cocoa beans.
-              </p>
-              <a
-                href="#products"
-                class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-              >
-                Shop Now
-              </a>
-            </div>
-            <div
-              class="hidden md:flex w-[35%] items-center justify-center bg-[#1A0E08]"
-            >
-              <img
-                src="./img/hero_chocolate.png"
-                alt="Chocolate and Cocoa"
-                class="w-full max-w-md mix-blend-lighten drop-shadow-2xl"
-              />
-            </div>
-          </div>
+    <!-- ===== FEATURES BAR ===== -->
+    <section class="text-white">
+      <div
+        class="relative -top-16
+          max-w-7xl mx-auto bg-[#FF653F] rounded-2xl grid grid-cols-2 md:grid-cols-4 gap-4 px-6 py-6 text-center text-xs sm:text-sm">
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+              <path
+                d="M204.73,51.85A108.07,108.07,0,0,0,20,128v56a28,28,0,0,0,28,28H64a28,28,0,0,0,28-28V144a28,28,0,0,0-28-28H44.84A84.05,84.05,0,0,1,128,44h.64a83.7,83.7,0,0,1,82.52,72H192a28,28,0,0,0-28,28v40a28,28,0,0,0,28,28h19.6A20,20,0,0,1,192,228H136a12,12,0,0,0,0,24h56a44.05,44.05,0,0,0,44-44V128A107.34,107.34,0,0,0,204.73,51.85ZM64,140a4,4,0,0,1,4,4v40a4,4,0,0,1-4,4H48a4,4,0,0,1-4-4V140Zm124,44V144a4,4,0,0,1,4-4h20v48H192A4,4,0,0,1,188,184Z">
+              </path>
+            </svg>
+          </span>
+          <span class="font-semibold text-black">Assistenza 24/7</span>
         </div>
-      </section>
-
-      <!-- ===== FEATURES BAR ===== -->
-      <section class="text-white">
-        <div
-          class="max-w-7xl mx-auto bg-amber-800 rounded-2xl grid grid-cols-2 md:grid-cols-4 gap-4 px-6 py-6 text-center text-xs sm:text-sm"
-        >
-          <div class="flex flex-col items-center gap-1">
-            <span class="text-xl">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#ffffff"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  d="M240,112a56.06,56.06,0,0,0-56-56c-1.77,0-3.54.1-5.29.26a56,56,0,0,0-101.42,0C75.54,56.1,73.77,56,72,56A56,56,0,0,0,48,162.59V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V162.59A56.09,56.09,0,0,0,240,112Zm-48,96H64V167.42a55.49,55.49,0,0,0,8,.58H184a55.49,55.49,0,0,0,8-.58Zm-8-56H170.25l5.51-22.06a8,8,0,0,0-15.52-3.88L153.75,152H136V128a8,8,0,0,0-16,0v24H102.25l-6.49-25.94a8,8,0,1,0-15.52,3.88L85.75,152H72a40,40,0,0,1,0-80l.58,0A55.21,55.21,0,0,0,72,80a8,8,0,0,0,16,0,40,40,0,0,1,80,0,8,8,0,0,0,16,0,55.21,55.21,0,0,0-.58-8l.58,0a40,40,0,0,1,0,80Z"
-                ></path>
-              </svg>
-            </span>
-            <span class="font-semibold">Artisan Made</span>
-          </div>
-          <div class="flex flex-col items-center gap-1">
-            <span class="text-xl">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#ffffff"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"
-                ></path>
-              </svg>
-            </span>
-            <span class="font-semibold">Free Shipping 50€+</span>
-          </div>
-          <div class="flex flex-col items-center gap-1">
-            <span class="text-xl"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#ffffff"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  d="M198.1,62.59a76,76,0,0,0-140.2,0A71.71,71.71,0,0,0,16,127.8C15.9,166,48,199,86.14,200A72.09,72.09,0,0,0,120,192.47V232a8,8,0,0,0,16,0V192.47A72.17,72.17,0,0,0,168,200l1.82,0C208,199,240.11,166,240,127.8A71.71,71.71,0,0,0,198.1,62.59ZM169.45,184a56.08,56.08,0,0,1-33.45-10v-41l43.58-21.78a8,8,0,1,0-7.16-14.32L136,115.06V88a8,8,0,0,0-16,0v51.06L83.58,120.84a8,8,0,1,0-7.16,14.32L120,156.94v17a56,56,0,0,1-33.45,10C56.9,183.23,31.92,157.52,32,127.84A55.77,55.77,0,0,1,67.11,76a8,8,0,0,0,4.53-4.67,60,60,0,0,1,112.72,0A8,8,0,0,0,188.89,76,55.79,55.79,0,0,1,224,127.84C224.08,157.52,199.1,183.23,169.45,184Z"
-                ></path></svg
-            ></span>
-            <span class="font-semibold">Organic Cocoa</span>
-          </div>
-          <div class="flex flex-col items-center gap-1">
-            <span class="text-xl"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="#ffffff"
-                viewBox="0 0 256 256"
-              >
-                <path
-                  d="M216,72H180.92c.39-.33.79-.65,1.17-1A29.53,29.53,0,0,0,192,49.57,32.62,32.62,0,0,0,158.44,16,29.53,29.53,0,0,0,137,25.91a54.94,54.94,0,0,0-9,14.48,54.94,54.94,0,0,0-9-14.48A29.53,29.53,0,0,0,97.56,16,32.62,32.62,0,0,0,64,49.57,29.53,29.53,0,0,0,73.91,71c.38.33.78.65,1.17,1H40A16,16,0,0,0,24,88v32a16,16,0,0,0,16,16v64a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V136a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM149,36.51a13.69,13.69,0,0,1,10-4.5h.49A16.62,16.62,0,0,1,176,49.08a13.69,13.69,0,0,1-4.5,10c-9.49,8.4-25.24,11.36-35,12.4C137.7,60.89,141,45.5,149,36.51Zm-64.09.36A16.63,16.63,0,0,1,96.59,32h.49a13.69,13.69,0,0,1,10,4.5c8.39,9.48,11.35,25.2,12.39,34.92-9.72-1-25.44-4-34.92-12.39a13.69,13.69,0,0,1-4.5-10A16.6,16.6,0,0,1,84.87,36.87ZM40,88h80v32H40Zm16,48h64v64H56Zm144,64H136V136h64Zm16-80H136V88h80v32Z"
-                ></path></svg
-            ></span>
-            <span class="font-semibold">Gift Wrapping</span>
-          </div>
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+              <path
+                d="M208,36H48A20,20,0,0,0,28,56v56c0,54.29,26.32,87.22,48.4,105.29,23.71,19.39,47.44,26,48.44,26.29a12.1,12.1,0,0,0,6.32,0c1-.28,24.73-6.9,48.44-26.29,22.08-18.07,48.4-51,48.4-105.29V56A20,20,0,0,0,208,36Zm-4,76c0,35.71-13.09,64.69-38.91,86.15A126.28,126.28,0,0,1,128,219.38a126.14,126.14,0,0,1-37.09-21.23C65.09,176.69,52,147.71,52,112V60H204ZM79.51,144.49a12,12,0,1,1,17-17L112,143l47.51-47.52a12,12,0,0,1,17,17l-56,56a12,12,0,0,1-17,0Z">
+              </path>
+            </svg>
+          </span>
+          <span class="font-semibold text-black">Prenotazioni Flessibili</span>
         </div>
-      </section>
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+              <path
+                d="M232.76,137.88A28.39,28.39,0,0,0,208.13,133L172,141.26c0-.42,0-.84,0-1.26a32,32,0,0,0-32-32H89.94a35.76,35.76,0,0,0-25.45,10.54L43,140H20A20,20,0,0,0,0,160v40a20,20,0,0,0,20,20H120a11.89,11.89,0,0,0,2.91-.36l64-16a11.4,11.4,0,0,0,1.79-.6l38.82-16.54c.23-.09.45-.19.67-.3a28.61,28.61,0,0,0,4.57-48.32ZM36,196H24V164H36Zm181.68-31.39-37.51,16L118.52,196H60V157l21.46-21.46A11.93,11.93,0,0,1,89.94,132H140a8,8,0,0,1,0,16H112a12,12,0,0,0,0,24h32a12.19,12.19,0,0,0,2.69-.3l67-15.41.47-.12a4.61,4.61,0,0,1,5.82,4.44A4.58,4.58,0,0,1,217.68,164.61ZM164,100a40.36,40.36,0,0,0,5.18-.34,40,40,0,1,0,29.67-59.32A40,40,0,1,0,164,100Zm40-36a16,16,0,1,1-16,16A16,16,0,0,1,204,64ZM164,44a16,16,0,0,1,12.94,6.58A39.9,39.9,0,0,0,164.2,76H164a16,16,0,0,1,0-32Z">
+              </path>
+            </svg>
+          </span>
+          <span class="font-semibold text-black">Rimborso Garantito</span>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+              <path
+                d="M80,108a12,12,0,0,1-12,12H28a12,12,0,0,1,0-24H68A12,12,0,0,1,80,108ZM68,136H28a12,12,0,0,0,0,24H68a12,12,0,0,0,0-24Zm0,40H28a12,12,0,0,0,0,24H68a12,12,0,0,0,0-24Zm80-40H108a12,12,0,0,0,0,24h40a12,12,0,0,0,0-24Zm0,40H108a12,12,0,0,0,0,24h40a12,12,0,0,0,0-24Zm40-96h40a12,12,0,0,0,0-24H188a12,12,0,0,0,0,24Zm40,16H188a12,12,0,0,0,0,24h40a12,12,0,0,0,0-24Zm0,40H188a12,12,0,0,0,0,24h40a12,12,0,0,0,0-24Zm0,40H188a12,12,0,0,0,0,24h40a12,12,0,0,0,0-24Z">
+              </path>
+            </svg>
+          </span>
+          <span class="font-semibold text-black">Qualità Certificata</span>
+        </div>
+      </div>
 
-      <!-- ===== PRODUCTS ===== -->
-      <section
-        id="products-section"
-        class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16"
-      >
-        <div class="text-center mb-10">
-          <p
-            class="text-amber-700 text-sm tracking-[0.2em] uppercase mb-2 font-medium"
-          >
-            Our Collection
+    </section>
+
+
+    <!-- ===== PRODUCTS ===== -->
+    <section id="products-section" class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
+      <div class="text-center mb-10">
+        <p class="text-[#FF653F] text-sm tracking-[0.2em] uppercase mb-2 font-medium">
+          Esplora la Nostra Selezione di Eventi Esclusivi
+        </p>
+        <h2 class="font-[Playfair_Display] text-2xl sm:text-4xl font-bold text-[#2D1810]">
+          Nostri Eventi
+        </h2>
+      </div>
+      <div id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
+      <a href="eventi.html"
+        class="inline-block mt-8 px-6 py-3 bg-[#FF653F] text-white font-semibold rounded-full text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+        <div class="flex items-center justify-center text-center ">
+          Vedi Tutti gli Eventi
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256">
+            <path
+              d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z">
+            </path>
+          </svg>
+        </div>
+      </a>
+    </section>
+
+    <!-- ===== ABOUT / CTA ===== -->
+    <section id="about" class="bg-black/80 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-16 sm:py-20 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-sm tracking-[0.2em] uppercase mb-3 font-medium">
+            La Nostra Storia
           </p>
-          <h2
-            class="font-[Playfair_Display] text-2xl sm:text-4xl font-bold text-[#2D1810]"
-          >
-            Premium Chocolates
+          <h2 class="font-[Playfair_Display] text-2xl sm:text-4xl font-bold mb-5 leading-tight">
+            Creiamo Eventi Memorabili dal 1987
+          </h2>
+          <p class="text-white/70 leading-relaxed mb-4 text-sm sm:text-base">
+            Ogni evento che organizziamo racconta una storia di passione e cura.
+            Dal concept creativo alla gestione in loco, il nostro team lavora
+            per offrire esperienze indimenticabili.
+          </p>
+          <p class="text-white/70 leading-relaxed text-sm sm:text-base">
+            Collaboriamo con location esclusive e fornitori selezionati per
+            trasformare ogni momento in un ricordo unico, con attenzione al
+            dettaglio e massima professionalità.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <img src="./img/cinema.jpg" alt="Event highlights"
+            class="rounded-2xl shadow-xl w-full aspect-square object-cover" />
+          <img src="./img/theater.jpg" alt="Event details"
+            class="rounded-2xl shadow-xl w-full aspect-square object-cover mt-8" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-64 overflow-hidden rounded-base md:h-120">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/slider1.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/slider2.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/slider3.jpg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+      
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+          <button type="button" class="w-3 h-3 rounded-base" aria-current="true" aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m15 19-7-7 7-7" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m9 5 7 7-7 7" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ===== CONTACT US ===== -->
+    <section id="contact" class="bg-[#FAF7F2] py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <p class="text-amber-700 text-sm tracking-[0.2em] uppercase mb-2 font-medium">
+            Siamo Qui per Te
+          </p>
+          <h2 class="font-[Playfair_Display] text-2xl sm:text-4xl font-bold text-[#2D1810]">
+            Contattaci per Organizzare il Tuo Prossimo Evento Indimenticabile
           </h2>
         </div>
-        <div
-          id="products"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-        ></div>
-      </section>
 
-      <!-- ===== ABOUT / CTA ===== -->
-      <section id="about" class="bg-[#2D1810] text-white">
-        <div
-          class="max-w-7xl mx-auto px-6 py-16 sm:py-20 grid md:grid-cols-2 gap-10 items-center"
-        >
-          <div>
-            <p
-              class="text-amber-400 text-sm tracking-[0.2em] uppercase mb-3 font-medium"
-            >
-              Our Story
-            </p>
-            <h2
-              class="font-[Playfair_Display] text-2xl sm:text-4xl font-bold mb-5 leading-tight"
-            >
-              Crafted with Passion Since 1987
-            </h2>
-            <p class="text-white/70 leading-relaxed mb-4 text-sm sm:text-base">
-              Every piece of chocolate we create tells a story of dedication.
-              From hand-selecting the finest cocoa beans to the meticulous
-              tempering process, our master chocolatiers pour their heart into
-              every creation.
-            </p>
-            <p class="text-white/70 leading-relaxed text-sm sm:text-base">
-              We source our cocoa from sustainable farms across Ghana, Ecuador,
-              and Madagascar — ensuring every bite supports ethical farming and
-              delivers unparalleled flavor.
-            </p>
-          </div>
-          <div class="grid grid-cols-2 gap-4">
-            <img
-              src="./img/choco_truffle.png"
-              alt="Truffles"
-              class="rounded-2xl shadow-xl w-full aspect-square object-cover"
-            />
-            <img
-              src="./img/choco_pralines.png"
-              alt="Pralines"
-              class="rounded-2xl shadow-xl w-full aspect-square object-cover mt-8"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== CONTACT US ===== -->
-      <section id="contact" class="bg-[#FAF7F2] py-16 sm:py-20">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="text-center mb-12">
-            <p
-              class="text-amber-700 text-sm tracking-[0.2em] uppercase mb-2 font-medium"
-            >
-              Get in Touch
-            </p>
-            <h2
-              class="font-[Playfair_Display] text-2xl sm:text-4xl font-bold text-[#2D1810]"
-            >
-              Contact Us
-            </h2>
-          </div>
-
-          <div class="grid lg:grid-cols-5 gap-10">
-            <!-- Contact Form -->
-            <div
-              class="lg:col-span-3 bg-[#6A3201] text-white rounded-2xl shadow-md p-6 sm:p-8"
-            >
-              <form
-                onsubmit="
+        <div class="grid lg:grid-cols-5 gap-10">
+          <!-- Contact Form -->
+          <div class="lg:col-span-3 bg-black/80 text-white rounded-2xl shadow-md p-6 sm:p-8">
+            <form onsubmit="
                   event.preventDefault();
                   Swal.fire({
                     toast: true,
@@ -339,253 +288,185 @@
                     timer: 2000,
                   });
                   this.reset();
-                "
-              >
-                <div class="grid sm:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label class="block text-xs font-medium mb-1">Name</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Your name"
-                      class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition"
-                    />
-                  </div>
-                  <div>
-                    <label class="block text-xs font-medium mb-1">Email</label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="you@example.com"
-                      class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition"
-                    />
-                  </div>
+                ">
+              <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label class="block text-xs font-medium mb-1">Nome</label>
+                  <input type="text" required placeholder="Your name"
+                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" />
                 </div>
-                <div class="mb-4">
-                  <label class="block text-xs font-medium mb-1">Subject</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="How can we help?"
-                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition"
-                  />
+                <div>
+                  <label class="block text-xs font-medium mb-1">Cognome</label>
+                  <input type="text" required placeholder="Your surname"
+                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" />
                 </div>
-                <div class="mb-6">
-                  <label class="block text-xs font-medium mb-1">Message</label>
-                  <textarea
-                    rows="5"
-                    required
-                    placeholder="Your message..."
-                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition resize-none"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="w-full bg-[#fff] border border-[#6A3201] text-[#6A3201] py-3 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+              </div>
+              <div class="mb-4">
+                <label class="block text-xs font-medium mb-1">Email</label>
+                <input type="email" required placeholder="you@example.com"
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" />
+              </div>
+              <div class="mb-4">
+                <label class="block text-xs font-medium mb-1">Oggetto</label>
+                <input type="text" required placeholder="How can we help?"
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" />
+              </div>
+              <div class="mb-6">
+                <label class="block text-xs font-medium mb-1">Messaggio</label>
+                <textarea rows="5" required placeholder="Your message..."
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition resize-none"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full border text-white py-3 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                Invia Messaggio
+              </button>
+            </form>
+          </div>
 
-            <!-- Contact Info Cards -->
-            <div class="lg:col-span-2 space-y-4">
-              <div
-                class="bg-white rounded-2xl shadow-sm p-5 flex items-start gap-4"
-              >
-                <div
-                  class="w-10 h-10 bg-amber-600 rounded-xl flex items-center justify-center flex-none"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="#ffffff"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-sm text-[#2D1810] mb-0.5">
-                    Visit Us
-                  </h4>
-                  <p class="text-gray-500 text-sm">
-                    Via Cioccolato 42<br />20121 Milano, Italy
-                  </p>
-                </div>
+          <!-- Contact Info Cards -->
+          <div class="lg:col-span-2 space-y-4">
+            <div class="bg-white rounded-2xl shadow-sm p-5 flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#FF653F] rounded-xl flex items-center justify-center flex-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256">
+                  <path
+                    d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z">
+                  </path>
+                </svg>
               </div>
-              <div
-                class="bg-white rounded-2xl shadow-sm p-5 flex items-start gap-4"
-              >
-                <div
-                  class="w-10 h-10 bg-amber-600 rounded-xl flex items-center justify-center flex-none"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="#ffffff"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-sm text-[#2D1810] mb-0.5">
-                    Email Us
-                  </h4>
-                  <p class="text-gray-500 text-sm">
-                    info@cocoaluxe.com<br />support@cocoaluxe.com
-                  </p>
-                </div>
+              <div>
+                <h4 class="font-semibold text-sm text-[#2D1810] mb-0.5">
+                  Visit Us
+                </h4>
+                <p class="text-gray-500 text-sm">
+                  Via Cioccolato 42<br />20121 Milano, Italy
+                </p>
               </div>
-              <div
-                class="bg-white rounded-2xl shadow-sm p-5 flex items-start gap-4"
-              >
-                <div
-                  class="w-10 h-10 bg-amber-600 rounded-xl flex items-center justify-center flex-none"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="#ffffff"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.06h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-sm text-[#2D1810] mb-0.5">
-                    Call Us
-                  </h4>
-                  <p class="text-gray-500 text-sm">
-                    +39 02 1234 5678<br />Mon-Sat, 9am-6pm
-                  </p>
-                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm p-5 flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#FF653F] rounded-xl flex items-center justify-center flex-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256">
+                  <path
+                    d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z">
+                  </path>
+                </svg>
               </div>
-              <div
-                class="bg-white rounded-2xl shadow-sm p-5 flex items-start gap-4"
-              >
-                <div
-                  class="w-10 h-10 bg-amber-600 rounded-xl flex items-center justify-center flex-none"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="#ffffff"
-                    viewBox="0 0 256 256"
-                  >
-                    <path
-                      d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-semibold text-sm text-[#2D1810] mb-0.5">
-                    Opening Hours
-                  </h4>
-                  <p class="text-gray-500 text-sm">
-                    Mon-Fri: 9am - 7pm<br />Sat-Sun: 10am - 5pm
-                  </p>
-                </div>
+              <div>
+                <h4 class="font-semibold text-sm text-[#2D1810] mb-0.5">
+                  Email Us
+                </h4>
+                <p class="text-gray-500 text-sm">
+                  info@eventx.com<br />support@eventx.com
+                </p>
+              </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm p-5 flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#FF653F] rounded-xl flex items-center justify-center flex-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256">
+                  <path
+                    d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.06h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm text-[#2D1810] mb-0.5">
+                  Chiamaci
+                </h4>
+                <p class="text-gray-500 text-sm">
+                  +39 02 1234 5678<br />Lun-Sab, 9am-6pm
+                </p>
+              </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm p-5 flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#FF653F] rounded-xl flex items-center justify-center flex-none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 256 256">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-sm text-[#2D1810] mb-0.5">
+                  Orari di Apertura
+                </h4>
+                <p class="text-gray-500 text-sm">
+                  Lun-Ven: 9am - 7pm<br />Sab-Dom: 10am - 5pm
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- ===== FOOTER ===== -->
-    <footer id="contact" class="bg-[#1a0e08] text-white/70">
-      <div
-        class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm"
-      >
-        <!-- Brand -->
-        <div>
-          <h3 class="font-[Playfair_Display] text-white text-xl font-bold mb-3">
-            Cocoa Luxe
-          </h3>
-          <p class="leading-relaxed">
-            Handcrafted premium chocolates made with the world's finest cocoa
-            beans. Taste the difference.
-          </p>
-        </div>
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-white font-semibold mb-3">Quick Links</h4>
-          <ul class="space-y-2">
-            <li>
-              <a href="#" class="hover:text-amber-400 transition">Home</a>
-            </li>
-            <li>
-              <a href="#products" class="hover:text-amber-400 transition"
-                >Products</a
-              >
-            </li>
-            <li>
-              <a href="#about" class="hover:text-amber-400 transition"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a href="#contact" class="hover:text-amber-400 transition"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-        <!-- Contact -->
-        <div>
-          <h4 class="text-white font-semibold mb-3">Contact</h4>
-          <ul class="space-y-2">
-            <li>info@cocoaluxe.com</li>
-            <li>+39 02 1234 5678</li>
-            <li>Via Cioccolato 42, Milano</li>
-          </ul>
-        </div>
-        <!-- Newsletter -->
-        <div>
-          <h4 class="text-white font-semibold mb-3">Newsletter</h4>
-          <p class="mb-3">Get 10% off your first order.</p>
-          <form
-            class="flex"
-            onsubmit="event.preventDefault()"
-            id="newletterform"
-          >
-            <input
-              id="email"
-              type="email"
-              placeholder="Email"
-              class="flex-1 min-w-0 bg-white/10 border border-white/20 rounded-l-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-amber-500 text-sm"
-            />
-            <button
-              id="newletter-btn"
-              class="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r-lg text-white font-semibold text-sm transition"
-            >
-              Join
-            </button>
-          </form>
-          <p id="subscribed" class="mt-2 hidden text-amber-500 text-sm">
-            Thank you for subscribing!
-          </p>
-        </div>
       </div>
-      <div
-        class="border-t border-white/10 text-center py-5 text-xs text-white/40"
-      >
-        © 2026 Cocoa Luxe. All rights reserved.
-      </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="./js/script.js"></script>
-  </body>
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" class="bg-black text-white/70">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+      <!-- Brand -->
+      <div>
+        <h3 class="font-[Playfair_Display] text-white text-xl font-bold mb-3">
+          EventX
+        </h3>
+        <p class="leading-relaxed">
+          Creiamo esperienze indimenticabili con cura, passione e attenzione ai dettagli.
+          Trasformiamo i vostri momenti speciali in ricordi eterni.
+        </p>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Link Veloci</h4>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="hover:text-[#FF653F] transition">Home</a>
+          </li>
+          <li>
+            <a href="eventi.html" class="hover:text-[#FF653F] transition">Eventi</a>
+          </li>
+          <li>
+            <a href="aboutus.html" class="hover:text-[#FF653F] transition">Chi Siamo</a>
+          </li>
+          <li>
+            <a href="contactus.html" class="hover:text-[#FF653F] transition">Contatti</a>
+          </li>
+          <li>
+            <a href="dovesiamo.html" class="hover:text-[#FF653F] transition">Dove Siamo</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Contatti</h4>
+        <ul class="space-y-2">
+          <li>info@eventx.com</li>
+          <li>+39 02 1234 5678</li>
+          <li>Via Cioccolato 42, Milano</li>
+        </ul>
+      </div>
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Newsletter</h4>
+        <p class="mb-3">Ricevi le nostre ultime offerte e novità.</p>
+        <form class="flex" onsubmit="event.preventDefault()" id="newletterform">
+          <input id="email" type="email" placeholder="Email"
+            class="flex-1 min-w-0 bg-white/10 border border-white/20 rounded-l-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-[#FF653F] text-sm" />
+          <button id="newletter-btn"
+            class="bg-[#FF653F] hover:bg-[#E54D2E] px-4 py-2 rounded-r-lg text-white font-semibold text-sm transition">
+            Iscriviti
+          </button>
+        </form>
+        <p id="subscribed" class="mt-2 hidden text-[#FF653F] text-sm">
+          Grazie per esserti iscritto!
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 text-center py-5 text-xs text-white/40">
+      © 2026 EventX. Tutti i diritti riservati.
+    </div>
+  </footer>
+
+  <script src="./js/general.js"></script>
+  <script src="./js/script.js"></script>
+
+</body>
+
 </html>

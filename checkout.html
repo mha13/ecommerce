@@ -1,196 +1,286 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="./img/favicon.ico" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Checkout — Cocoa Luxe</title>
-  </head>
-  <body class="font-[Inter] bg-[#FAF7F2] text-[#2D1810] min-h-screen flex flex-col">
 
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-[#8D4201] backdrop-blur-md shadow-lg">
-      <div class="max-w-7xl m-auto flex items-center justify-between px-4 sm:px-6 py-3">
-        <a href="./index.html" class="flex-none w-16 sm:w-20">
-          <img src="./img/logo.png" alt="Cocoa Luxe Logo" class="w-full" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./img/favicon.ico" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Checkout — EventX</title>
+</head>
+
+<body class="font-[Inter] bg-[#FAF7F2] text-[#2D1810] min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-lg">
+    <div class="max-w-7xl m-auto flex items-center justify-between px-4 sm:px-6 py-3">
+      <!-- Logo -->
+      <a href="./index.html" class="flex-none w-16 sm:w-32">
+        <img src="./img/logo.jpg" alt="EventiX - Home" class="w-full" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-8 text-white font-[Playfair_Display] font-semibold text-[15px] tracking-wide">
+        <a href="./index.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Home</a>
+        <a href="aboutus.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Chi Siamo</a>
+        <a href="eventi.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Eventi</a>
+        <a href="contactus.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Contattaci</a>
+        <a href="dovesiamo.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Dove Siamo</a>
+      </nav>
+
+      <!-- Cart + Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="./cart.html" id="cartello" class="relative cursor-pointer text-black hover:text-[#FF653F] transition">
+          <span
+            class="absolute -top-2 -right-2 bg-black text-white w-5 h-5 rounded-full flex justify-center items-center text-[10px] font-bold shadow">0</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z">
+            </path>
+          </svg>
         </a>
-        <span class="text-white font-medium text-sm tracking-wide">Secure Checkout</span>
-        <a href="./cart.html" class="text-white hover:text-amber-200 text-sm transition">← Back to Cart</a>
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" class="md:hidden text-black" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+            </path>
+          </svg>
+        </button>
       </div>
-    </header>
+    </div>
+    <!-- Mobile Nav Drawer -->
+    <nav id="mobile-nav" class="md:hidden hidden bg-[#FF653F] text-white px-6 pb-4 space-y-3 text-sm font-medium">
+      <a href="./index.html" class="block py-2 border-b border-white/10 hover:text-white transition">Home</a>
+      <a href="aboutus.html" class="block py-2 border-b border-white/10 hover:text-white transition">Chi Siamo</a>
+      <a href="eventi.html" class="block py-2 border-b border-white/10 hover:text-white transition">Eventi</a>
+      <a href="contactus.html" class="block py-2 hover:text-white transition">Contattaci</a>
+      <a href="dovesiamo.html" class="block py-2 border-t border-white/10 hover:text-white transition">Dove Siamo</a>
+    </nav>
+  </header>
 
-    <main class="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-10">
-      <!-- Checkout Form -->
-      <div id="checkout-form-container">
-        <h1 class="font-[Playfair_Display] text-3xl sm:text-4xl font-bold mb-8">Checkout</h1>
+  <main class="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-10">
+    <!-- Checkout Form -->
+    <div id="checkout-form-container">
+      <h1 class="font-[Playfair_Display] text-3xl sm:text-4xl font-bold mb-8">Checkout</h1>
 
-        <div class="grid md:grid-cols-5 gap-8">
-          <!-- Form -->
-          <form id="checkout-form" class="md:col-span-3 space-y-6" onsubmit="return false;">
-            <!-- Shipping -->
-            <div class="bg-white rounded-2xl shadow-sm p-6">
-              <h2 class="font-bold text-lg mb-4 flex items-center gap-2">
-                <span class="w-7 h-7 bg-[#8D4201] text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
-                Shipping Information
-              </h2>
-              <div class="grid sm:grid-cols-2 gap-4">
+      <div class="grid md:grid-cols-5 gap-8">
+        <!-- Form -->
+        <form id="checkout-form" class="md:col-span-3 space-y-6" onsubmit="return false;">
+          <!-- Shipping -->
+          <div class="bg-white rounded-2xl shadow-sm p-6">
+            <h2 class="font-bold text-lg mb-4 flex items-center gap-2">
+              <span
+                class="w-7 h-7 bg-[#FF653F] text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+              Shipping Informazioni
+            </h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Nome</label>
+                <input type="text" required
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                  placeholder="Mario" id="nome" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Cognome</label>
+                <input type="text" required
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                  placeholder="Rossi" id="cognome" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-medium text-gray-500 mb-1">Email</label>
+                <input type="email" required
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                  placeholder="mario@example.com" id="email" />
+              </div>
+              <div class="sm:col-span-2">
+                <label class="block text-xs font-medium text-gray-500 mb-1">Indirizzo</label>
+                <input type="text" required
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                  placeholder="Via Roma 42" id="indrizzio" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Città</label>
+                <input type="text" required
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                  placeholder="Milano" id="citta" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">ZIP Code</label>
+                <input type="text" required
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                  placeholder="20121" maxlength="5" id="zip-code" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment -->
+          <div class="bg-white rounded-2xl shadow-sm p-6" id="payment">
+
+            <h2 class="font-bold text-lg mb-4 flex items-center gap-2">
+              <span
+                class="w-7 h-7 bg-[#FF653F] text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+              Dettagli di Pagamento
+            </h2>
+
+            <div class="my-4">
+              <select
+                class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                id="payment-method">
+                <option value="card">Carta di Credito</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash">Contantti</option>
+              </select>
+            </div>
+            <div class="space-y-4" id="card-details">
+
+              <div>
+                <label class="block text-xs font-medium text-gray-500 mb-1">Numero della Carta</label>
+                <input type="text" maxlength="16"
+                  class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                  placeholder="4242 4242 4242 4242" id="card-number" />
+              </div>
+              <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">First Name</label>
-                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="Mario" />
+                  <label class="block text-xs font-medium text-gray-500 mb-1">Expiry</label>
+                  <input type="text" maxlength="5"
+                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                    placeholder="MM/YY" id="card-expiry" />
                 </div>
                 <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Last Name</label>
-                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="Rossi" />
-                </div>
-                <div class="sm:col-span-2">
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Email</label>
-                  <input type="email" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="mario@example.com" />
-                </div>
-                <div class="sm:col-span-2">
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Address</label>
-                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="Via Roma 42" />
-                </div>
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">City</label>
-                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="Milano" />
-                </div>
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">ZIP Code</label>
-                  <input type="text" required class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="20121" />
+                  <label class="block text-xs font-medium text-gray-500 mb-1">CVV</label>
+                  <input type="text"  maxlength="3"
+                    class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#FF653F] transition"
+                    placeholder="123" id="card-cvv" />
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Payment -->
-            <div class="bg-white rounded-2xl shadow-sm p-6">
-              <h2 class="font-bold text-lg mb-4 flex items-center gap-2">
-                <span class="w-7 h-7 bg-[#8D4201] text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
-                Payment Details
-              </h2>
-              <div class="space-y-4">
-                <div>
-                  <label class="block text-xs font-medium text-gray-500 mb-1">Card Number</label>
-                  <input type="text" required maxlength="19" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="4242 4242 4242 4242" />
-                </div>
-                <div class="grid grid-cols-2 gap-4">
-                  <div>
-                    <label class="block text-xs font-medium text-gray-500 mb-1">Expiry</label>
-                    <input type="text" required maxlength="5" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="MM/YY" />
-                  </div>
-                  <div>
-                    <label class="block text-xs font-medium text-gray-500 mb-1">CVV</label>
-                    <input type="text" required maxlength="3" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[#8D4201] transition" placeholder="123" />
-                  </div>
-                </div>
-              </div>
+          <button id="place-order-btn" type="submit"
+            class="w-full bg-[#FF653F] hover:bg-[#E54D2E] text-white py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            Place Order
+          </button>
+        </form>
+
+        <!-- Order Summary Sidebar -->
+        <div class="md:col-span-2">
+          <div class="bg-white rounded-2xl shadow-sm p-6 sticky top-24">
+            <h2 class="font-bold text-lg mb-4">Order Summary</h2>
+            <div id="order-items" class="space-y-3 max-h-64 overflow-y-auto"></div>
+            <hr class="my-4 border-gray-200" />
+            <div class="flex justify-between text-sm text-gray-500 mb-2">
+              <span>sobtotale</span><span id="order-subtotal">$0.00</span>
             </div>
-
-            <button id="place-order-btn" type="submit" class="w-full bg-[#8D4201] hover:bg-[#6A3201] text-white py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-              Place Order
-            </button>
-          </form>
-
-          <!-- Order Summary Sidebar -->
-          <div class="md:col-span-2">
-            <div class="bg-white rounded-2xl shadow-sm p-6 sticky top-24">
-              <h2 class="font-bold text-lg mb-4">Order Summary</h2>
-              <div id="order-items" class="space-y-3 max-h-64 overflow-y-auto"></div>
-              <hr class="my-4 border-gray-200" />
-              <div class="flex justify-between text-sm text-gray-500 mb-2">
-                <span>Subtotal</span><span id="order-subtotal">$0.00</span>
-              </div>
-              <div class="flex justify-between text-sm text-gray-500 mb-2">
-                <span>Shipping</span><span id="order-shipping">Free</span>
-              </div>
-              <hr class="my-3 border-gray-200" />
-              <div class="flex justify-between font-bold text-lg text-[#2D1810]">
-                <span>Total</span><span id="order-total">$0.00</span>
-              </div>
+            <div class="flex justify-between text-sm text-gray-500 mb-2">
+              <span>Tasse</span><span id="order-tasse">Free</span>
+            </div>
+            <hr class="my-3 border-gray-200" />
+            <div class="flex justify-between font-bold text-lg text-[#2D1810]">
+              <span>Totale</span><span id="order-total">$0.00</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Success State (hidden initially) -->
-      <div id="checkout-success" class="hidden text-center py-20">
-        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#16a34a" viewBox="0 0 256 256">
-            <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
-          </svg>
-        </div>
-        <h2 class="font-[Playfair_Display] text-3xl font-bold mb-3">Order Confirmed!</h2>
-        <p class="text-gray-500 mb-2">Thank you for your purchase.</p>
-        <p class="text-gray-400 text-sm mb-8">Order #<span id="order-number"></span></p>
-        <a href="./index.html" class="inline-block bg-[#8D4201] hover:bg-[#6A3201] text-white px-8 py-3 rounded-full font-semibold text-sm transition">
-          Back to Shop
-        </a>
+    <!-- Success State (hidden initially) -->
+    <div id="checkout-success" class="hidden text-center py-20">
+      <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#16a34a" viewBox="0 0 256 256">
+          <path
+            d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z">
+          </path>
+        </svg>
       </div>
-    </main>
+      <h2 class="font-[Playfair_Display] text-3xl font-bold mb-3">Order Confirmed!</h2>
+      <p class="text-gray-500 mb-2">Thank you for your purchase.</p>
+      <p class="text-gray-400 text-sm mb-8">Order #<span id="order-number"></span></p>
+      <a href="./index.html"
+        class="inline-block bg-[#FF653F] hover:bg-[#E54D2E] text-white px-8 py-3 rounded-full font-semibold text-sm transition">
+        Back to Shop
+      </a>
+    </div>
+  </main>
 
-    <footer class="bg-[#1a0e08] text-white/70">
-      <div class="border-t border-white/10 text-center py-5 text-xs text-white/40">
-        © 2026 Cocoa Luxe. All rights reserved.
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" class="bg-black text-white/70">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+      <!-- Brand -->
+      <div>
+        <h3 class="font-[Playfair_Display] text-white text-xl font-bold mb-3">
+          EventX
+        </h3>
+        <p class="leading-relaxed">
+          Creiamo esperienze indimenticabili con cura, passione e attenzione ai dettagli.
+          Trasformiamo i vostri momenti speciali in ricordi eterni.
+        </p>
       </div>
-    </footer>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Link Veloci</h4>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="hover:text-[#FF653F] transition">Home</a>
+          </li>
+          <li>
+            <a href="eventi.html" class="hover:text-[#FF653F] transition">Eventi</a>
+          </li>
+          <li>
+            <a href="aboutus.html" class="hover:text-[#FF653F] transition">Chi Siamo</a>
+          </li>
+          <li>
+            <a href="contactus.html" class="hover:text-[#FF653F] transition">Contatti</a>
+          </li>
+          <li>
+            <a href="dovesiamo.html" class="hover:text-[#FF653F] transition">Dove Siamo</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Contatti</h4>
+        <ul class="space-y-2">
+          <li>info@eventx.com</li>
+          <li>+39 02 1234 5678</li>
+          <li>Via Cioccolato 42, Milano</li>
+        </ul>
+      </div>
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Newsletter</h4>
+        <p class="mb-3">Ricevi le nostre ultime offerte e novità.</p>
+        <form class="flex" onsubmit="event.preventDefault()" id="newletterform">
+          <input id="email" type="email" placeholder="Email"
+            class="flex-1 min-w-0 bg-white/10 border border-white/20 rounded-l-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-[#FF653F] text-sm" />
+          <button id="newletter-btn"
+            class="bg-[#FF653F] hover:bg-[#E54D2E] px-4 py-2 rounded-r-lg text-white font-semibold text-sm transition">
+            Iscriviti
+          </button>
+        </form>
+        <p id="subscribed" class="mt-2 hidden text-[#FF653F] text-sm">
+          Grazie per esserti iscritto!
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 text-center py-5 text-xs text-white/40">
+      © 2026 EventX. Tutti i diritti riservati.
+    </div>
+  </footer>
+  <script src="./js/checkout.js"></script>
+  <script src="./js/general.js"></script>
+</body>
 
-    <script>
-      const ENDPOINT_CART = "http://localhost:3000/cart";
-
-      document.addEventListener("DOMContentLoaded", async () => {
-        const cart = await fetch(ENDPOINT_CART).then((r) => r.json());
-        const itemsEl = document.getElementById("order-items");
-
-        if (cart.length === 0) {
-          window.location.href = "./cart.html";
-          return;
-        }
-
-        let subtotal = 0;
-        cart.forEach((item) => {
-          const qty = item.quantity || 1;
-          subtotal += item.price * qty;
-          itemsEl.innerHTML += `
-            <div class="flex items-center gap-3">
-              <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover" />
-              <div class="flex-1 min-w-0">
-                <p class="text-sm font-medium truncate">${item.name}</p>
-                <p class="text-xs text-gray-400">x${qty}</p>
-              </div>
-              <p class="text-sm font-semibold">$${(item.price * qty).toFixed(2)}</p>
-            </div>`;
-        });
-
-        const shipping = subtotal >= 50 ? 0 : 5.99;
-        document.getElementById("order-subtotal").textContent = `$${subtotal.toFixed(2)}`;
-        document.getElementById("order-shipping").textContent = shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`;
-        document.getElementById("order-total").textContent = `$${(subtotal + shipping).toFixed(2)}`;
-
-        // Place order
-        document.getElementById("checkout-form").addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const btn = document.getElementById("place-order-btn");
-          btn.textContent = "Processing...";
-          btn.disabled = true;
-
-          // Simulate processing delay
-          await new Promise((r) => setTimeout(r, 1500));
-
-          // Clear cart
-          for (const item of cart) {
-            await fetch(`${ENDPOINT_CART}/${item.id}`, { method: "DELETE" });
-          }
-
-          // Show success
-          document.getElementById("checkout-form-container").classList.add("hidden");
-          document.getElementById("checkout-success").classList.remove("hidden");
-          document.getElementById("order-number").textContent = Math.random().toString(36).substring(2, 10).toUpperCase();
-        });
-      });
-    </script>
-  </body>
 </html>

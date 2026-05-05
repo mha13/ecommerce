@@ -1,5 +1,3 @@
-const ENDPOINT_CART = "http://localhost:3000/cart";
-
 document.addEventListener("DOMContentLoaded", () => {
   loadCart();
 });
@@ -104,12 +102,12 @@ function updateSummary(cart) {
   cart.forEach((item) => {
     subtotal += item.price * (item.quantity || 1);
   });
-  const shipping = subtotal >= 50 ? 0 : 5.99;
+  const tasse = subtotal * 0.1; // Tassa di spedizione del 10%
 
-  document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
-  document.getElementById("shipping").textContent =
-    shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`;
-  document.getElementById("total").textContent = `$${(subtotal + shipping).toFixed(2)}`;
+  document.getElementById("subtotal").textContent = `€${subtotal.toFixed(2)}`;
+  document.getElementById("tasse").textContent =
+    tasse === 0 ? "Free" : `€${tasse.toFixed(2)}`;
+  document.getElementById("total").textContent = `€${(subtotal + tasse).toFixed(2)}`;
 }
 
 // ===== Badge =====

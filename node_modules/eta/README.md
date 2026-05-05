@@ -41,7 +41,7 @@ Eta is a lightweight and blazing fast embedded JS templating engine that works i
 - 🔧 Configurable
   - Plugins, custom delimiters, caching
 - 🔨 Powerful
-  - Precompilation, partials, async
+  - Precompilation, partials, async, blocks
   - **Layout support**!
 - 🔥 Reliable
   - Better quotes/comments support

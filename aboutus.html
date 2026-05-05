@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./img/favicon.ico" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Checkout — EventX</title>
+</head>
+
+<body class="font-[Inter] bg-[#FAF7F2] text-[#2D1810] min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 shadow-lg">
+    <div class="max-w-7xl m-auto flex items-center justify-between px-4 sm:px-6 py-3">
+      <!-- Logo -->
+      <a href="./index.html" class="flex-none w-16 sm:w-32">
+        <img src="./img/logo.jpg" alt="EventiX - Home" class="w-full" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-8 text-white font-[Playfair_Display] font-semibold text-[15px] tracking-wide">
+        <a href="./index.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Home</a>
+        <a href="aboutus.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Chi Siamo</a>
+        <a href="eventi.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Eventi</a>
+        <a href="contactus.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Contattaci</a>
+        <a href="dovesiamo.html"
+          class="text-black hover:text-[#FF653F] transition-all duration-200 hover:-translate-y-0.5">Dove Siamo</a>
+      </nav>
+
+      <!-- Cart + Mobile Toggle -->
+      <div class="flex items-center gap-4">
+        <a href="./cart.html" id="cartello" class="relative cursor-pointer text-black hover:text-[#FF653F] transition">
+          <span
+            class="absolute -top-2 -right-2 bg-black text-white w-5 h-5 rounded-full flex justify-center items-center text-[10px] font-bold shadow">0</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M233.21,56.31A12,12,0,0,0,224,52H66L60.53,21.85A12,12,0,0,0,48.73,12H24a12,12,0,0,0,0,24H38.71L63.62,173a28,28,0,0,0,4.07,10.21A32,32,0,1,0,123,196h34a32,32,0,1,0,31-24H91.17a4,4,0,0,1-3.93-3.28L84.92,156H196.1a28,28,0,0,0,27.55-23l12.16-66.86A12,12,0,0,0,233.21,56.31ZM100,204a8,8,0,1,1-8-8A8,8,0,0,1,100,204Zm88,8a8,8,0,1,1,8-8A8,8,0,0,1,188,212Zm12-83.28A4,4,0,0,1,196.1,132H80.56L70.38,76H209.62Z">
+            </path>
+          </svg>
+        </a>
+        <!-- Mobile Hamburger -->
+        <button id="menu-toggle" class="md:hidden text-black" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 256 256">
+            <path
+              d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Nav Drawer -->
+    <nav id="mobile-nav" class="md:hidden hidden bg-[#FF653F] text-white px-6 pb-4 space-y-3 text-sm font-medium">
+      <a href="./index.html" class="block py-2 border-b border-white/10 hover:text-white transition">Home</a>
+      <a href="aboutus.html" class="block py-2 border-b border-white/10 hover:text-white transition">Chi Siamo</a>
+      <a href="eventi.html" class="block py-2 border-b border-white/10 hover:text-white transition">Eventi</a>
+      <a href="contactus.html" class="block py-2 hover:text-white transition">Contattaci</a>
+      <a href="dovesiamo.html" class="block py-2 border-t border-white/10 hover:text-white transition">Dove Siamo</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="bg-[#FAF7F2] py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-6">
+
+      
+        <div class="text-center mb-12">
+          <p class="text-[#FF653F] text-sm tracking-[0.2em] uppercase mb-2 font-medium">
+            La Nostra Storia
+          </p>
+          <h2 class="font-[Playfair_Display] text-2xl sm:text-4xl font-bold text-[#2D1810] mb-4">
+            Chi Siamo
+          </h2>
+          <p class="text-gray-500 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+            Benvenuti su <strong>EventX</strong> — la piattaforma italiana dedicata a esperienze
+            indimenticabili. Scopri chi siamo e cosa ci rende unici.
+          </p>
+        </div>
+
+
+        <div class="grid md:grid-cols-2 gap-10 items-center mb-14">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M92,108a12,12,0,0,1,12-12h72a12,12,0,0,1,0,24H104A12,12,0,0,1,92,108Zm12,52h72a12,12,0,0,0,0-24H104a12,12,0,0,0,0,24ZM236,64V184a28,28,0,0,1-28,28H36A32,32,0,0,1,4,180V88a12,12,0,0,1,24,0v92a8,8,0,0,0,16,0V64A20,20,0,0,1,64,44H216A20,20,0,0,1,236,64Zm-24,4H68V180a32,32,0,0,1-1,8H208a4,4,0,0,0,4-4Z"></path></svg>
+              <h3 class="font-[Playfair_Display] text-xl font-bold text-[#2D1810]">La Nostra Missione</h3>
+            </div>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+              Nata nel <strong>1987</strong>, EventX è la realtà italiana di riferimento per la gestione
+              e la promozione di eventi culturali, musicali e di intrattenimento. La nostra missione è
+              semplice: <em>trasformare ogni momento in un ricordo unico</em>.
+            </p>
+            <p class="text-gray-600 text-sm sm:text-base leading-relaxed mt-3">
+              Collaboriamo con location esclusive e fornitori selezionati in tutta Italia, portando
+              passione, professionalità e cura del dettaglio in ogni progetto.
+            </p>
+          </div>
+
+          <div class="bg-[#FF653F] rounded-2xl p-6 text-white">
+            <div class="flex items-center gap-3 mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" viewBox="0 0 256 256"><path d="M228.75,100.05c-3.52-3.67-7.15-7.46-8.34-10.33-1.06-2.56-1.14-7.83-1.21-12.47-.15-10-.34-22.44-9.18-31.27s-21.27-9-31.27-9.18c-4.64-.07-9.91-.15-12.47-1.21-2.87-1.19-6.66-4.82-10.33-8.34C148.87,20.46,140.05,12,128,12s-20.87,8.46-27.95,15.25c-3.67,3.52-7.46,7.15-10.33,8.34-2.56,1.06-7.83,1.14-12.47,1.21C67.25,37,54.81,37.14,46,46S37,67.25,36.8,77.25c-.07,4.64-.15,9.91-1.21,12.47-1.19,2.87-4.82,6.66-8.34,10.33C20.46,107.13,12,116,12,128S20.46,148.87,27.25,156c3.52,3.67,7.15,7.46,8.34,10.33,1.06,2.56,1.14,7.83,1.21,12.47.15,10,.34,22.44,9.18,31.27s21.27,9,31.27,9.18c4.64.07,9.91.15,12.47,1.21,2.87,1.19,6.66,4.82,10.33,8.34C107.13,235.54,116,244,128,244s20.87-8.46,27.95-15.25c3.67-3.52,7.46-7.15,10.33-8.34,2.56-1.06,7.83-1.14,12.47-1.21,10-.15,22.44-.34,31.27-9.18s9-21.27,9.18-31.27c.07-4.64.15-9.91,1.21-12.47,1.19-2.87,4.82-6.66,8.34-10.33C235.54,148.87,244,140.05,244,128S235.54,107.13,228.75,100.05Zm-17.32,39.29c-4.82,5-10.28,10.72-13.19,17.76-2.82,6.8-2.93,14.16-3,21.29-.08,5.36-.19,12.71-2.15,14.66s-9.3,2.07-14.66,2.15c-7.13.11-14.49.22-21.29,3-7,2.91-12.73,8.37-17.76,13.19C135.78,214.84,130.4,220,128,220s-7.78-5.16-11.34-8.57c-5-4.82-10.72-10.28-17.76-13.19-6.8-2.82-14.16-2.93-21.29-3-5.36-.08-12.71-.19-14.66-2.15s-2.07-9.3-2.15-14.66c-.11-7.13-.22-14.49-3-21.29-2.91-7-8.37-12.73-13.19-17.76C41.16,135.78,36,130.4,36,128s5.16-7.78,8.57-11.34c4.82-5,10.28-10.72,13.19-17.76,2.82-6.8,2.93-14.16,3-21.29C60.88,72.25,61,64.9,63,63s9.3-2.07,14.66-2.15c7.13-.11,14.49-.22,21.29-3,7-2.91,12.73-8.37,17.76-13.19C120.22,41.16,125.6,36,128,36s7.78,5.16,11.34,8.57c5,4.82,10.72,10.28,17.76,13.19,6.8,2.82,14.16,2.93,21.29,3,5.36.08,12.71.19,14.66,2.15s2.07,9.3,2.15,14.66c.11,7.13.22,14.49,3,21.29,2.91,7,8.37,12.73,13.19,17.76,3.41,3.56,8.57,8.94,8.57,11.34S214.84,135.78,211.43,139.34ZM176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path></svg>
+              <span class="font-semibold text-base">Perché sceglierci?</span>
+            </div>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+                  <path
+                    d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z" />
+                </svg>
+                Oltre 35 anni di esperienza nel settore
+              </li>
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+                  <path
+                    d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z" />
+                </svg>
+                Più di 500 eventi organizzati ogni anno
+              </li>
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+                  <path
+                    d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z" />
+                </svg>
+                Partnership con location esclusive in tutta Italia
+              </li>
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#fff" viewBox="0 0 256 256">
+                  <path
+                    d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z" />
+                </svg>
+                Team dedicato disponibile 24/7
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-14">
+         
+          <div class="bg-white rounded-2xl shadow-sm p-6 text-center border border-gray-100">
+            <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FF653F" viewBox="0 0 256 256">
+                <path
+                  d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-68a28,28,0,0,1-28,28v8a8,8,0,0,1-16,0v-8a28,28,0,0,1-28-28,8,8,0,0,1,16,0,12,12,0,0,0,12,12h16a12,12,0,0,0,0-24H112a28,28,0,0,1,0-56v-8a8,8,0,0,1,16,0v8a28,28,0,0,1,28,28,8,8,0,0,1-16,0,12,12,0,0,0-12-12H112a12,12,0,0,0,0,24h16A28,28,0,0,1,168,148Z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-[#2D1810] mb-2">Prezzi Trasparenti</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Nessuna sorpresa. I nostri prezzi sono chiari e
+              competitivi, con rimborso garantito.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm p-6 text-center border border-gray-100">
+            <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FF653F" viewBox="0 0 256 256">
+                <path
+                  d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.43a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.51A8,8,0,0,1,250.14,206.7Z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-[#2D1810] mb-2">Team Esperto</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Professionisti appassionati con anni di esperienza nella
+              cura di ogni dettaglio.</p>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-sm p-6 text-center border border-gray-100">
+            <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FF653F" viewBox="0 0 256 256">
+                <path
+                  d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128a133.33,133.33,0,0,1,23.07-30.75C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z" />
+              </svg>
+            </div>
+            <h3 class="font-semibold text-[#2D1810] mb-2">Visibilità Totale</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">Aggiornamenti in tempo reale su prenotazioni, rimborsi e
+              disponibilità degli eventi.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#2D1810] rounded-2xl px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="text-[#FF653F] text-3xl font-bold font-[Playfair_Display]">35+</p>
+            <p class="text-white/60 text-xs uppercase tracking-widest mt-1">Anni di Esperienza</p>
+          </div>
+          <div>
+            <p class="text-[#FF653F] text-3xl font-bold font-[Playfair_Display]">500+</p>
+            <p class="text-white/60 text-xs uppercase tracking-widest mt-1">Eventi l'Anno</p>
+          </div>
+          <div>
+            <p class="text-[#FF653F] text-3xl font-bold font-[Playfair_Display]">50k+</p>
+            <p class="text-white/60 text-xs uppercase tracking-widest mt-1">Clienti Soddisfatti</p>
+          </div>
+          <div>
+            <p class="text-[#FF653F] text-3xl font-bold font-[Playfair_Display]">20+</p>
+            <p class="text-white/60 text-xs uppercase tracking-widest mt-1">Città in Italia</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" class="bg-black text-white/70">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
+      <!-- Brand -->
+      <div>
+        <h3 class="font-[Playfair_Display] text-white text-xl font-bold mb-3">
+          EventX
+        </h3>
+        <p class="leading-relaxed">
+          Creiamo esperienze indimenticabili con cura, passione e attenzione ai dettagli.
+          Trasformiamo i vostri momenti speciali in ricordi eterni.
+        </p>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Link Veloci</h4>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="hover:text-[#FF653F] transition">Home</a>
+          </li>
+          <li>
+            <a href="eventi.html" class="hover:text-[#FF653F] transition">Eventi</a>
+          </li>
+          <li>
+            <a href="aboutus.html" class="hover:text-[#FF653F] transition">Chi Siamo</a>
+          </li>
+          <li>
+            <a href="contactus.html" class="hover:text-[#FF653F] transition">Contatti</a>
+          </li>
+          <li>
+            <a href="dovesiamo.html" class="hover:text-[#FF653F] transition">Dove Siamo</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Contatti</h4>
+        <ul class="space-y-2">
+          <li>info@eventx.com</li>
+          <li>+39 02 1234 5678</li>
+          <li>Via Cioccolato 42, Milano</li>
+        </ul>
+      </div>
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-white font-semibold mb-3">Newsletter</h4>
+        <p class="mb-3">Ricevi le nostre ultime offerte e novità.</p>
+        <form class="flex" onsubmit="event.preventDefault()" id="newletterform">
+          <input id="email" type="email" placeholder="Email"
+            class="flex-1 min-w-0 bg-white/10 border border-white/20 rounded-l-lg px-3 py-2 text-white placeholder-white/40 focus:outline-none focus:border-[#FF653F] text-sm" />
+          <button id="newletter-btn"
+            class="bg-[#FF653F] hover:bg-[#E54D2E] px-4 py-2 rounded-r-lg text-white font-semibold text-sm transition">
+            Iscriviti
+          </button>
+        </form>
+        <p id="subscribed" class="mt-2 hidden text-[#FF653F] text-sm">
+          Grazie per esserti iscritto!
+        </p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 text-center py-5 text-xs text-white/40">
+      © 2026 EventX. Tutti i diritti riservati.
+    </div>
+  </footer>
+  <script src="./js/general.js"></script>
+</body>
+
+</html>
