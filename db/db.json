@@ -55,17 +55,6 @@
       "image": "img/event6.avif"
     }
   ],
-  "cart": [
-    {
-      "id": "n-zbAJLhgdU",
-      "title": "PRESAGIO Festival 2026",
-      "date": "2026-06-06",
-      "location": "Parco Arte Vivente, Torino",
-      "description": "Un rituale collettivo dove il suono non segue il tempo — lo precede. Sabato 6 giugno, Presagio abita il confine tra natura e post-industriale, tra arte contemporanea e cultura clubbing all'interno del PAV. Performance artistiche, musica live e dj set con una lineup d'eccezione (Legowelt, Vlada, e/tape, Voodoos and Taboos e molti altri) dalle 13:00 a mezzanotte.",
-      "price": 15,
-      "image": "img/event3.avif",
-      "quantity": 1
-    }
-  ],
+  "cart": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
